@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO 1: Título de la página -->
+    <title>DistroMatch: Linux Mint vs Zorin OS 18</title>
+    
+    <!-- SEO 2: descripción -->
+    <meta name="description" content="Comparativa técnica entre Linux Mint y Zorin OS 18 para usuarios que desean migrar de sistema operativo.">
+    
+    <!-- Enlace a la hoja de estilos  -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO PRINCIPAL DE LA PÁGINA -->
+    <header>
+        <h1>DistroMatch: Comparativa Linux Mint vs Zorin OS 18</h1>
+        
+        <!-- Menú de navegación funcional entre páginas -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio / Comparativa</a></li>
+                <li><a href="linux-mint.html">Linux Mint</a></li>
+                <li><a href="zorin-os.html">Zorin OS 18</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        
+        <!-- SECCIÓN 1: INTRODUCCIÓN Y TABLA -->
+        <section>
+            <h2>Comparación de Sistemas Operativos</h2>
+            <p>A continuación se presentan las características técnicas principales de cada distribución:</p>
+            
+            <!-- Tabla con datos requerida en las especificaciones -->
+            <table border="1">
+            <thead>
+        <tr>
+            <th>Característica / Requisito</th>
+            <th>Linux Mint (Cinnamon / XFCE)</th>
+            <th>Zorin OS 18 (Core / Lite)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Base del Sistema</strong></td>
+            <td>Ubuntu LTS</td>
+            <td>Ubuntu LTS</td>
+        </tr>
+        <tr>
+            <td><strong>Variantes y Entornos</strong></td>
+            <td>Cinnamon (Principal), MATE, XFCE (Ligero)</td>
+            <td>Zorin Desktop / GNOME (Core), XFCE (Lite)</td>
+        </tr>
+        <tr>
+            <td><strong>Procesador (CPU) Recomendado</strong></td>
+            <td>2 núcleos (XFCE) / 4 núcleos (Cinnamon)</td>
+            <td>2 núcleos (Lite) / 4 a 8 núcleos (Core)</td>
+        </tr>
+        <tr>
+            <td><strong>Memoria RAM Mínima / Recomendada</strong></td>
+            <td>2 GB (XFCE) / 4 GB (Cinnamon)</td>
+            <td>2 GB (Lite) / 4 a 8 GB (Core)</td>
+        </tr>
+        <tr>
+            <td><strong>Memoria de Video (VRAM)</strong></td>
+            <td>512 MB (Integrada) / 1 GB (Dedicada)</td>
+            <td>512 MB (Lite) / 2 GB+ VRAM (Core para efectos)</td>
+        </tr>
+        <tr>
+            <td><strong>Modos de Interfaz (Layouts)</strong></td>
+            <td>Estilo clásico Windows/Linux tradicional</td>
+            <td>Windows 11, Windows Clásico, macOS, GNOME Puro</td>
+        </tr>
+    </tbody>
+            </table>
+        </section>
+
+        <!-- SECCIÓN 2: LISTA E IMÁGENES -->
+        <section>
+            <h2>Ventajas Destacadas</h2>
+            
+            <!-- Lista desordenada requerida -->
+            <ul>
+                <li><strong>Linux Mint:</strong> Consumo de recursos moderado, interfaz tradicional y alta estabilidad.</li>
+                <li><strong>Zorin OS 18:</strong> Diseño visual moderno similar a Windows/macOS y gran facilidad de uso.</li>
+            </ul>
+
+            <!--Imagenes -->
+            <div>
+                <h3>Galería de Interfaces</h3>
+                <img src="Imagenes/mint-desktop.png" alt="Captura del escritorio de Linux Mint Cinnamon" width="600">
+                <img src="Imagenes/zorin-desktop.png" alt="Captura de la interfaz de usuario de Zorin OS 18" width="600">
+            </div>
+
+            <!-- Video incrustado de YouTube -->
+            <div>
+                <h3>Video Promocional</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=4JLCGPiS1mA" title="Video Informativo" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: Línea D — Programación del lado del cliente  - CALCULADORA INTERACTIVA CON JS -->
+        <section>
+            <h2>¿Qué distribución y edición se adaptan a tu PC?</h2>
+    <p>Ingresa las especificaciones de tu hardware para calcular la mejor opción:</p>
+
+    <form id="evaluadorForm">
+        <label for="ramInput">Memoria RAM (GB):</label><br>
+        <input type="number" id="ramInput" min="1" max="128" placeholder="Ej: 4" required><br><br>
+
+        <label for="coresInput">Núcleos del Procesador (CPU):</label><br>
+        <input type="number" id="coresInput" min="1" max="64" placeholder="Ej: 2 o 4" required><br><br>
+
+        <label for="vramInput">Memoria de Video (VRAM en GB):</label><br>
+        <input type="number" id="vramInput" min="0" max="24" step="1" placeholder="Ej: 0.5, 1 o 2" required><br><br>
+
+        <p>¿Qué estilo de interfaz prefieres?</p>
+        <input type="radio" id="layoutWin" name="interfaz" value="moderno" checked>
+        <label for="layoutWin">Moderno (Estilo Windows 11 / macOS)</label><br>
+        
+        <input type="radio" id="layoutClass" name="interfaz" value="clasico">
+        <label for="layoutClass">Clásico Tradicional / Menú directo</label><br><br>
+
+        <button type="button" onclick="evaluarSistema()">Calcular Recomendación</button>
+    </form>
+
+    <div id="resultadoPrueba">
+        <p><em>Ingresa los datos arriba para ver el resultado aquí.</em></p>
+    </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 DistroMatch - Proyecto de Programación Web</p>
+    </footer>
+
+    <!-- Enlace al archivo de script de JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
